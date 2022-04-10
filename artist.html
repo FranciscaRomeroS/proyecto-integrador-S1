@@ -6,19 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artistas</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header class="headerpadre">
         <div>
-            <h1>SoundTrap</h1>
-            <a href="">Home</a>
-            <a href="./artist.html">Artistas</a>
-            <a href="./album.html">Album</a>
-            <a href="./canciones.html">Canciones</a>
-            <a href="./genero.html">Genero</a>
-            <a href="./detalle-genero.html"> Detalle de Genero</a>
-            <a href="./playlist.html">Mi Playlist</a>
+            <img src="./css/img/sound logo.png" alt="logo" class="logo">
         </div>
+        <h1 class="nombrepag">SoundTrap</h1>
+        <div>
+            <form action="./track.html" method="get">
+                <input type="text" name="busqueda" id="busqueda" placeholder="artistas, info o album">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+         
+     <nav class="navegacion">
+            <a class="navegacion" href="./home.html">Home</a>
+            <a class="navegacion" href="./artist.html">Artistas</a>
+            <a class="navegacion" href="./album.html">Album</a>
+            <a class="navegacion" href="./canciones.html">Canciones</a>
+            <a class="navegacion" href="./genero.html">Genero</a>
+            <a class="navegacion" href="./detalle-genero.html"> Detalle de Genero</a>
+            <a class="navegacion" href="./playlist.html">Mi Playlist</a>
+        </nav>
+            
     </header>
 </body>
 </html>
