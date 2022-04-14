@@ -55,7 +55,7 @@ body{
     display: flex;
 }
 
-.Albumes{
+.Artistas{
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -69,6 +69,23 @@ body{
 .titulo{
    text-align: center;
 }
+
+.v{
+    width: 200px;
+    height: 199px;
+}
+
+.cajaPadre3{
+    display: flex;
+}
+
+.Albumes{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 30px;  
+}
+
 
 
 
