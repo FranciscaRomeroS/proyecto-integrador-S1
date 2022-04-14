@@ -37,7 +37,7 @@ body{
 }
 
 .cajaPadre1{
-    display: flex ;
+    display: flex;
 }
 
 .top{
@@ -86,6 +86,16 @@ body{
     margin: 30px;  
 }
 
+.cajaPadre4{
+    display: flex;
+}
+
+.Canciones{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 30px;  
+}
 
 
 
