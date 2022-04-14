@@ -1,7 +1,7 @@
 *{box-sizing: border-box;}
 body{
     margin: 0;
-    background-color: rgb(202, 202, 202);
+    background-color: rgb(255, 255, 255);
 }
 .navegacion{
     color: rgb(84, 126, 84);
@@ -35,3 +35,56 @@ body{
     justify-content: center;
     space
 }
+
+.cajaPadre1{
+    display: flex ;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 30px;
+}
+
+.top1{
+    width: 400px;
+}
+
+.cajaPadre2{
+    display: flex;
+}
+
+.Albumes{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 30px;
+}
+
+.top2{
+    width: 200px;
+}
+
+.titulo{
+   text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
