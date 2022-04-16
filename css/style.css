@@ -100,6 +100,15 @@ body{
     height: 220px;
 }
 
+.letra{
+    font-family:'Ubuntu', sans-serif ;
+}
+.link1{
+    font-family:'Ubuntu', sans-serif ;
+    text-decoration: none;
+    color: rgb(203, 44, 126);
+}
+
 
 
 
