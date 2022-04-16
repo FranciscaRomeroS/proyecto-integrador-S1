@@ -1,10 +1,10 @@
 *{box-sizing: border-box;}
 body{
     margin: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(249, 249, 249);
 }
 .navegacion{
-    color: rgb(84, 126, 84);
+    color: rgb(203, 44, 126);;
     font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
 }
@@ -21,7 +21,7 @@ body{
     justify-content: space-evenly;
 }
 .nombrepag{
-    color: rgb(31, 90, 39) ;
+    color: rgb(203, 44, 126);;
     font-size: 40px;
     background-position: right center;
     font-family: 'Ubuntu', sans-serif;
@@ -68,6 +68,7 @@ body{
 
 .titulo{
    text-align: center;
+   font-family:'Ubuntu', sans-serif ;
 }
 
 .v{
@@ -113,6 +114,30 @@ body{
     text-decoration: none;
     font-family:'Ubuntu', sans-serif ; 
     color: rgb(203, 44, 126);
+}
+
+.genero{
+    justify-content: space-evenly;
+}
+
+.generoJ{
+    justify-content: center;
+}
+
+.infoparrafo{
+    display: flex;
+}
+ 
+.parrafo{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family:'Ubuntu', sans-serif ; 
+    margin: 30px;
+}
+.info{
+    background-color: rgb(246, 198, 230);
+    padding: 10px;
 }
 
 
