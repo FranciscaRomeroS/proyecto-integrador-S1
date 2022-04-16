@@ -109,6 +109,11 @@ body{
     color: rgb(203, 44, 126);
 }
 
+.linkplaylist{
+    text-decoration: none;
+    font-family:'Ubuntu', sans-serif ; 
+    color: rgb(203, 44, 126);
+}
 
 
 
