@@ -48,7 +48,7 @@ body{
 }
 
 .top1{
-    width: 400px;
+    width: 400px; 
 }
 
 .cajaPadre2{
@@ -103,6 +103,8 @@ body{
 
 .letra{
     font-family:'Ubuntu', sans-serif ;
+    text-decoration: none;
+    color: black;
 }
 .link1{
     font-family:'Ubuntu', sans-serif ;
