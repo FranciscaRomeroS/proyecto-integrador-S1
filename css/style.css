@@ -149,6 +149,13 @@ body{
     margin: 30px;  
 }
 
+.footer{
+    box-sizing: border-box;
+    background-color: rgb(203, 44, 126);
+    text-align: center;
+    color: rgb(4, 4, 4);
+}
+
 
 
 
