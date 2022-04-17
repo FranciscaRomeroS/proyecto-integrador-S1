@@ -140,6 +140,13 @@ body{
     padding: 10px;
 }
 
+.playlist{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 30px;  
+}
+
 
 
 
