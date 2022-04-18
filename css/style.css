@@ -157,13 +157,49 @@ body{
 }
 
 @media (max-width: 420px){
-    *{box-sizing: border box;}
-    .logo{
-        width: 15vw;
-        height: 15vh;
+    .headerpadre{
+        display: inline;
     }
-}
+    
+    .cajaPadre1{
+        display: inline;
+    }
+    
+    .top1{
+        width: 55vw;
+    }
 
+    .cajaPadre2{
+        display: inline;
+    }
+
+    .Artistas{
+        width: 55vw;
+    }
+
+    .cajaPadre3{
+        display: inline;
+    }
+
+    .Albumes{
+        width: 55vw;
+    }
+
+    .cajaPadre4{
+        display: inline;
+    }
+
+    .Canciones{
+        width: 55vw;
+    }
+
+    .infoparrafo{
+        display: inline;
+    }
+
+
+}
+    
 
 
 
