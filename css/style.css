@@ -156,7 +156,13 @@ body{
     color: rgb(4, 4, 4);
 }
 
-
+@media (max-width: 420px){
+    *{box-sizing: border box;}
+    .logo{
+        width: 15vw;
+        height: 15vh;
+    }
+}
 
 
 
