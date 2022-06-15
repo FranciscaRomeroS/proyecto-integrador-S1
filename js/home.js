@@ -7,9 +7,9 @@ fetch(url)
         return response.json()
 
     })
-
     .then(function (data) {
         console.log(data);
+    
         let tracks = data.artists.data;
         let albums = data.albums.data;
         let canciones = data.tracks.data;
