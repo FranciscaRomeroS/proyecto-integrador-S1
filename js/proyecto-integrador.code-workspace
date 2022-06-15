@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../Programacion I/proyecto-integrador"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "proyecto-integrador-S1"
+	}
+}
