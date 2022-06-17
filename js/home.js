@@ -13,6 +13,7 @@ fetch(url)
         let tracks = data.artists.data;
         let albums = data.albums.data;
         let canciones = data.tracks.data;
+        console.log(canciones);
         
 
 
@@ -49,10 +50,10 @@ fetch(url)
 
         for (let i = 0; i<5; i++){
             sectionCanciones.innerHTML += `<article class="Canciones">
-            <a href="./canciones.html">
+            <a href="./canciones.html?id=${canciones[i].id}">
                   <img class="top2" src="${canciones[i].album.cover_medium}" alt="">
             </a>
-            <a class="letra" href="./canciones.html">
+            <a class="letra" href="./canciones.html?id=${canciones[i].id}">
                 <h4>${canciones[i].title}</h4>
             </a>
            
