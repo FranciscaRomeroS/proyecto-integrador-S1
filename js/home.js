@@ -1,4 +1,4 @@
-let proxi = `https://api.allorigins.win/raw?url=`;
+let proxi = `https://cors-anywhere.herokuapp.com/`;
 let endpoint = `https://api.deezer.com/chart`;
 let url = proxi+endpoint;
 

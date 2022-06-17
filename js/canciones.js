@@ -3,33 +3,27 @@ let qsol = new URLSearchParams(qs);
 let id = qsol.get('id');
 let titulo = document.querySelector('.tema')
 let sectionAlbumes = document.querySelector('.cajaPadre3')
-        let portada = document.querySelector('.top2')
-        let cantante = document.querySelector('.link1')
-        let favorito = document.querySelector('.submit')
+       
 
-const url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks${id}`;
+const url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`;
 let idGuardar=id
 fetch(url)
     .then(function(response){
         return response.json();
     })
     .then(function(data){
-        console.log(data.id);
+        console.log(data);
+        console.log(data.title)
 
-        titulo.innerText = data.title;
-        portada.src = data.album.cover_xl;
-        cantante.innerText = data.artist.name;
-       
-        idGuardar=data.id
 
         for (let i = 0; i < 5; i++)
         {
-            sectionAlbumes.innerHTML += `<article class="Albumes">
+            sectionAlbumes.innerHTML = `<article class="Albumes">
             <a href="./album.html">
-              <img class="top2" src="${data.id.md5_image}" alt="">  
+              <img class="top2" src="${data.album.cover}" alt="">  
             </a>
-            <h3 class="letra">${data.id.title}</h3>
-            <a class="link1" href="./artist.html">${data.id.artist}</a>
+            <h3 class="letra">${data.title}</h3>
+            <a class="link1" href="./artist.html">${data.artist.name}</a>
             <br>
             
             <br>
@@ -47,6 +41,7 @@ fetch(url)
     console.log(idGuardar)
     
     let favoritos = [];
+    let submit = document.querySelector('.submit')
     let recupStorage = localStorage.getItem('favoritos');
 
     if(recupStorage != null){
@@ -58,7 +53,7 @@ fetch(url)
             fav.innerText = "Sacar de Mi playlist"
     }
 
-   favoritos.addEventListener('click', function(e){
+   submit.addEventListener('click', function(e){
     e.preventDefault()
     if (favoritos.includes(idGuardar)){
         let indice = favoritos.indexOf(idGuardar);
@@ -72,7 +67,7 @@ fetch(url)
     
     let favJSON = JSON.stringify(favoritos);
     localStorage.setItem('favoritos', favJSON)
-   })
+   }) 
 
 
 
