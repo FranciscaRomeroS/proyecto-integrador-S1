@@ -7,7 +7,7 @@ let sectionAlbumes = document.querySelector('.cajaPadre3')
         let cantante = document.querySelector('.link1')
         let favorito = document.querySelector('.submit')
 
-const url = `https://api.allorigins.win/raw?url=https://developers.deezer.com/api/track/${id}`
+const url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks${id}`;
 let idGuardar=id
 fetch(url)
     .then(function(response){
@@ -26,10 +26,10 @@ fetch(url)
         {
             sectionAlbumes.innerHTML += `<article class="Albumes">
             <a href="./album.html">
-              <img class="top2" src="./css/img/miley-rosa.jpg" alt="">  
+              <img class="top2" src="${data.id.md5_image}" alt="">  
             </a>
-            <h3 class="letra">Angels Like You</h3>
-            <a class="link1" href="./artist.html">Miley Cyrus</a>
+            <h3 class="letra">${data.id.title}</h3>
+            <a class="link1" href="./artist.html">${data.id.artist}</a>
             <br>
             
             <br>
@@ -42,9 +42,10 @@ fetch(url)
         }
     })
     .catch(function(error){
-        console.log('El error es' + error);
+        console.log(error);
     })
     console.log(idGuardar)
+    
     let favoritos = [];
     let recupStorage = localStorage.getItem('favoritos');
 
@@ -54,19 +55,19 @@ fetch(url)
     
 
     if(favoritos.includes(idGuardar)){
-            fav.innerText = "Sacar de favoritos"
+            fav.innerText = "Sacar de Mi playlist"
     }
 
-   favorito.addEventListener('click', function(e){
+   favoritos.addEventListener('click', function(e){
     e.preventDefault()
     if (favoritos.includes(idGuardar)){
         let indice = favoritos.indexOf(idGuardar);
         favoritos.splice(indice, 1);
-        fav.innerText = "Agregar a favoritos"
+        fav.innerText = "Agregar a Mi playlist"
     }
     else{
         favoritos.push(idGuardar);
-        fav.innerText = "Sacar de favoritos";
+        fav.innerText = "Sacar de Mi playlist";
     }
     
     let favJSON = JSON.stringify(favoritos);
