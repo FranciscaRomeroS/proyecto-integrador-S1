@@ -128,6 +128,7 @@ body{
 
 .infoparrafo{
     display: flex;
+    flex-direction: column;
 }
  
 .parrafo{
