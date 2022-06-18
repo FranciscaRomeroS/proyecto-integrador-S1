@@ -38,36 +38,33 @@ fetch(url)
     .catch(function(error){
         console.log(error);
     })
-    console.log(idGuardar)
     
-    let favoritos = [];
-    let submit = document.querySelector('.submit')
-    let recupStorage = localStorage.getItem('favoritos');
+    /*let playlist = [];
+    let recuperoStorage = localStorage.getItem('playlist');
 
-    if(recupStorage != null){
-        favoritos =JSON.parse(recupStorage);
+    if(recuperoStorage != null){
+        playlist = JSON.parse(recuperoStorage);
     }
     
+    let submit = document.querySelector('.submit');
 
-    if(favoritos.includes(idGuardar)){
-            fav.innerText = "Sacar de Mi playlist"
+    if(playlist.includes(id)) {
+        submit.innerText = "Quitar de la Playlist";
     }
+    submit.addEventListener(`click`,function(e){
+        e.preventDefault()
+        if(playlist.includes(id)){
+            let indice = playlist.indexOf(id);
+            playlist.splice(indice, 1)
+            submit.innerText = "Agregar a mi Playlist"
+        } else {
+            playlist.push(id);
+            submit.innerText = "Quitar de mi Playlist";
+        }
+        let subJSON = JSON. stringify(playlist);
+        localStorage.setItem('playlist', subJSON)
 
-   submit.addEventListener('click', function(e){
-    e.preventDefault()
-    if (favoritos.includes(idGuardar)){
-        let indice = favoritos.indexOf(idGuardar);
-        favoritos.splice(indice, 1);
-        fav.innerText = "Agregar a Mi playlist"
-    }
-    else{
-        favoritos.push(idGuardar);
-        fav.innerText = "Sacar de Mi playlist";
-    }
-    
-    let favJSON = JSON.stringify(favoritos);
-    localStorage.setItem('favoritos', favJSON)
-   }) 
-
+    }); */
+   
 
 
