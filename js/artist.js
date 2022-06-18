@@ -20,19 +20,19 @@ fetch(url)
         {
             sectionArtistas.innerHTML = `<article class="Artistas">
                 <a href="./artist.html">
-                     <img class="top2" src="${data.album.cover}" alt="">            
+                     <img class="top2" src="${data.}" alt="">            
                 </a>  
                 <h4>${data.artist.name}</h4>
                 <ol class="letra">
-                    <li>${data.album.title}</li>
+                    <li>${data.}</li>
                     <hr>
-                    <li>${data.album.title}</li>
+                    <li>${data.}</li>
                     <hr>
-                    <li>${data.album.title}</li>
+                    <li>${data.}</li>
                     <hr>
-                    <li>${data.album.title}</li>
+                    <li>${data.}</li>
                     <hr>
-                    <li>${data.album.title}</li>
+                    <li>${data.}</li>
                     <hr>
                 </ol>
                     
