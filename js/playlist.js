@@ -1,7 +1,7 @@
 let recuperoStorage = localStorage.getItem('.titulo');
 let titulo = JSON.parse(recuperoStorage);
 let section = document.querySelector('.Albumes');
-let cancionesPlaylist = ``;
+let cancionesPlaylist = '';
 
 if(titulo == null || titulo.length == 0){
     section.innerHTML = '<p> No agregaste a tu playlist</p>';

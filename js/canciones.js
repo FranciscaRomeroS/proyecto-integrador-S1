@@ -39,7 +39,7 @@ fetch(url)
         console.log(error);
     })
     
-    /*let playlist = [];
+    let playlist = [];
     let recuperoStorage = localStorage.getItem('playlist');
 
     if(recuperoStorage != null){
@@ -64,7 +64,7 @@ fetch(url)
         let subJSON = JSON. stringify(playlist);
         localStorage.setItem('playlist', subJSON)
 
-    }); */
+    }); 
    
 
 
