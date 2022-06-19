@@ -5,7 +5,7 @@ let titulo = document.querySelector('.tema')
 let sectionAlbumes = document.querySelector('.cajaPadre3')
        
 
-const url = `https://cors-anywhere.herokuapp.com/https://developers.deezer.com/api/album ${id}`;
+const url = `https://cors-anywhere.herokuapp.com/https://developers.deezer.com/api/album${id}`;
 let idGuardar=id
 fetch(url)
     .then(function(response){

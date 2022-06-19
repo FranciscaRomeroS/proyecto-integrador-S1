@@ -1,45 +1,49 @@
 let qs = location.search;
 let qsol = new URLSearchParams(qs);
-let id = qsol.get('id');
-let titulo = document.querySelector('.tema')
-let sectionArtistas = document.querySelector('.cajaPadre2')
-       
+let id = qsol.get("id");
 
-const url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`;
-let idGuardar=id
-fetch(url)
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(data){
-        console.log(data);
-        console.log(data.title)
+let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}`;
+let urlCancionesArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/albums?limit=5`;
+let detalleArtista = document.querySelector(".cajaPadre2");
+let cancionesArtista = document.querySelector(".listaAlbumes")
 
+console.log(id);
 
-        for (let i = 0; i < 5; i++)
-        {
-            sectionArtistas.innerHTML = `<article class="Artistas">
-                <a href="./artist.html">
-                     <img class="top2" src="${data.artist.picture_medium}" alt="">            
-                </a>  
-                <h4>${data.artist.name}</h4>
-                <ol class="letra">
-                    <li>${data.album.title}</li>
-                    <hr>
-                    <li>${data.album.title}</li>
-                    <hr>
-                    <li>${data.album.title}</li>
-                    <hr>
-                    <li>${data.album.title}</li>
-                    <hr>
-                    <li>${data.album.title}</li>
-                    <hr>
-                </ol>
-                    
-            </article>`
-            
-        }
-    })
-    .catch(function(error){
-        console.log(error);
-    })
+fetch(urlArtistas)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+
+   detalleArtista.innerHTML += `<article class="Artistas">
+    <a href="./artist.html">
+         <img class="top2" src="${data.picture_medium}" alt="">            
+    </a>  
+    <h4>${data.name}</h4>
+    <ol class="letra">`;
+  })
+
+  .catch(function (errores) {
+    console.log(errores);
+  });
+
+let listaAlbumes = " ";
+
+fetch(urlCancionesArtistas)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+
+    for (let i = 0; i < 5; i++) {
+      listaAlbumes += `<li>${data.data[i].title}</li>`;
+    }
+
+    cancionesArtista.innerHTML += listaAlbumes;
+  })
+
+  .catch(function (errores) {
+    console.log(errores);
+  });
