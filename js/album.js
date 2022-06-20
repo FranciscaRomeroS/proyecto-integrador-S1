@@ -26,7 +26,7 @@ fetch(urlAlbum)
    </a>
    <h4 class="letra">${data.title}</h4>
    <a class="link1" href="./artist.html">${data.artist.name}</a>
-   <a class="link1" href="./genero.html">${data.genres.data.name}</a>
+   <a class="link1" href="./genero.html">${data.genres.data[0].name}</a>
    <p class="letra">${data.release_date}</p>
    <ol class="letra">
        
