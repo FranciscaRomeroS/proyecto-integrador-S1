@@ -64,7 +64,7 @@ fetch(url)
         let subJSON = JSON. stringify(playlist);
         localStorage.setItem('playlist', subJSON)
 
-    }); 
+    });
    
 
 
