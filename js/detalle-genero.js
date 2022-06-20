@@ -4,9 +4,6 @@ let id = qstoObjetoLiteral.get("id");
 let seccionCantantes = document.querySelector(".cajaPadre3");
 
 
-
-
-
 const url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`
 const url2 = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}/artists`
 

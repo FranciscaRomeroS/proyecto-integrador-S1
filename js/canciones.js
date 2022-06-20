@@ -1,3 +1,4 @@
+/* Obtener QS */
 let qs = location.search;
 let qsol = new URLSearchParams(qs);
 let id = qsol.get('id');
@@ -65,6 +66,3 @@ fetch(url)
         localStorage.setItem('playlist', subJSON)
 
     });
-   
-
-

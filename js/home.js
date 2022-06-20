@@ -39,7 +39,7 @@ fetch(url)
 
         for (let i = 0; i <5; i++) {
             sectionAlbums.innerHTML += `<article class="Albumes">
-            <a href="./album.html">
+            <a href="./album.html?id=${data.artists.data[i].id}">
             <img class="top2" src="${albums[i].cover_medium}" alt="">  
             </a>
             <a class="letra" href="./album.html">

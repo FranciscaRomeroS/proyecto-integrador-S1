@@ -1,4 +1,4 @@
-let recuperoStorage = localStorage.getItem('.titulo');
+let recuperoStorage = localStorage.getItem('playlist');
 let titulo = JSON.parse(recuperoStorage);
 let section = document.querySelector('.Albumes');
 let cancionesPlaylist = '';
