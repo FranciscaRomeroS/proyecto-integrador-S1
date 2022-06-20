@@ -1,13 +1,15 @@
-let proxi = `https://cors-anywhere.herokuapp.com/`;
-let endpoint = `https://api.deezer.com/chart`;
-let url = proxi+endpoint;
+let proxi = `https://cors-anywhere.herokuapp.com/`; /* Te intercambia por otra la direccion */
+let endpoint = `https://api.deezer.com/chart`; /* la ruta que proporciona la info a renderizar */
+let url = proxi+endpoint; /* las dos unidas tienen que ir en el fetch */
 
-fetch(url)
-    .then(function (response) {
-        return response.json()
+
+fetch(url) /* recibe un paramero que es la ruta desde donde obtenemos la info, retrona una promesa */
+
+    .then(function (response) { /* recibe una funcion (callback) la cual recibe a la respuesta (retorno) como parametro */
+        return response.json() /* con .json convertimos la info en un objeto literal */
 
     })
-    .then(function (data) {
+    .then(function (data) { /* recibe una funcion (callback) que tiene como parametro los datos que recibira el primer then,convencion data */
         console.log(data);
     
         let tracks = data.artists.data;
@@ -62,7 +64,7 @@ fetch(url)
         }
 
     })
-
+    /* atrapara los errores en cualquiera de las intancias del fetch*/
     .catch (function (error) {
  console.log("Error: " + error);
     })

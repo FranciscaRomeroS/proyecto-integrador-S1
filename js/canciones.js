@@ -2,9 +2,11 @@
 let qs = location.search;
 let qsol = new URLSearchParams(qs);
 let id = qsol.get('id');
-let titulo = document.querySelector('.tema')
-let sectionAlbumes = document.querySelector('.cajaPadre3')
-       
+
+let imgCancion = document.querySelector('#imgCancion')
+let tituloCancion = document.querySelector('#tituloCancion')
+let nombreArtista   = document.querySelector('#nombreArtista')
+let submit = document.getElementById('btnPlaylist'); 
 
 const url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`;
 let idGuardar=id
@@ -16,25 +18,13 @@ fetch(url)
         console.log(data);
         console.log(data.title)
 
+        imgCancion.src = data.album.cover_medium;
+        tituloCancion.innerText = data.title;
+        nombreArtista.innerText = data.artist.name;
+        
 
-        for (let i = 0; i < 5; i++)
-        {
-            sectionAlbumes.innerHTML = `<article class="Albumes">
-            <a href="./album.html">
-              <img class="top2" src="${data.album.cover}" alt="">  
-            </a>
-            <h3 class="letra">${data.title}</h3>
-            <a class="link1" href="./artist.html">${data.artist.name}</a>
-            <br>
-            
-            <br>
-            <form action="./playlist.html" method="GET">
-                <button class="submit" type="submit">Agregar a mi Playlist</button>
-            </form>
-            <br>
-            <a class="linkplaylist" href="./playlist.html">Ir a mi Playlist</a>
-        </article>`
-        }
+
+
     })
     .catch(function(error){
         console.log(error);
@@ -47,7 +37,7 @@ fetch(url)
         playlist = JSON.parse(recuperoStorage);
     }
     
-    let submit = document.querySelector('.submit');
+    
 
     if(playlist.includes(id)) {
         submit.innerText = "Quitar de la Playlist";
