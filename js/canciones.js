@@ -4,7 +4,7 @@ let qsol = new URLSearchParams(qs);
 let id = qsol.get('id');
 
 //Selecciono el DOM
-let imgAlbum = document.querySelector('#imgCancion')
+let imgCancion = document.querySelector('#imgCancion')
 let tituloCancion = document.querySelector('#tituloCancion')
 let nombreArtista   = document.querySelector('#nombreArtista')
 let submit = document.getElementById('btnPlaylist'); 
@@ -24,7 +24,7 @@ fetch(url)
     .then(function(data){
         console.log(data);
 
-        imgAlbum = data.album.cover_medium;
+        imgCancion.src = data.album.cover_medium;
         tituloCancion.innerText = data.title;
         nombreArtista.innerText = data.artist.name;
         player.src = data.preview
