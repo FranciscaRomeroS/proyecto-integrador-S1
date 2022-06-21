@@ -21,37 +21,31 @@ fetch(urlArtistas)
     if (finGenero == true)
     seccionSpinner.style.display = "none";
     if (response.status === 200) {   
-        return response.json() ;
+      console.log(response.name)
+      seccionDetalleArtista.innerHTML += `<article class="Artistas">
+      <a href="./artist.html">
+      <img class="top2" src="${data.picture_medium}" alt=""> 
+              </a>
+      <a class="letra" href="./artist.html">
+           <h4>${data.name}</h4>
+      </a>
+    </article>`;
 } else {
- 
-  seccionDetalleArtista.innerHTML +=  `<article class="Artistas">
-  <a href="./artist.html">
-       <img class="top2" src="${data.picture_medium}" alt="">            
-  </a>  
-  <h4>${data.name}</h4>
-  <ol class="letra">`;
                                        
 }         
 
-    
   })
   .then(function (data) {
 
      
     if (data.name) {
-        
-      
       seccionDetalleArtista.innerHTML = `<article class="parrafo info">
       <a class="link1" href="./detalle-genero.html?id=${generos[i].id}"> <h2>${generos[i].name}</h2> </a> 
       </article>` ;
   
-  
     } else { 
-       /*  alert('No hay resultados para tu busqueda')*/
+         alert('No hay resultados para tu busqueda')
     }})
-
-     
-    
 
 fetch(urlGenero)
 .then(function (response) {
@@ -63,23 +57,13 @@ fetch(urlGenero)
    if (finArtista == true)
    seccionSpinner.style.display = "none";
    if (data.name) {
-    seccionGeneros.innerHTML = `
-    <article class="articuloDetalleArtista">
-    <a href="./detallle-genero.html?id=${data.id}"><h3 class="tamanofuenteh3">Pertenece al genero: ${data.name}</h3></a>
-    <div class="divImagen">
-    <img class="imgalbum" id="imgalbumGenero" src="${data.picture_medium}" alt="">
-    </div>
- 
-    </article>
- ` 
+    seccionGeneros.innerHTML = `<article class="parrafo info">
+    <a class="link1" href="./detalle-genero.html?id=${generos[i].id}"> <h2>${generos[i].name}</h2> </a> 
+    </article> ` 
     
 } else {
-    //alert('No hay resultados para tu busqueda')
+    alert('No hay resultados para tu busqueda')
 }
-
-
-   
-
   })
 
   .catch(function (errores) {

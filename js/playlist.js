@@ -5,7 +5,7 @@ let cancionesPlaylist = '';
 
 if(titulo == null || titulo.length == 0){
     section.innerHTML = '<p> No agregaste a tu playlist</p>';
-} else{
+} else {
     for(let i = 0; i < titulo.length; i ++) {
         let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${titulo[i]}`;
         fetch (url)
