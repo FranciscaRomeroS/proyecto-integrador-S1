@@ -21,7 +21,7 @@ fetch(urlArtistas)
     if (finGenero == true)
     seccionSpinner.style.display = "none";
     if (response.status === 200) {   
-      console.log(response.name)
+      console.log(response)
       seccionDetalleArtista.innerHTML += `<article class="Artistas">
       <a href="./artist.html">
       <img class="top2" src="${data.picture_medium}" alt=""> 
@@ -44,8 +44,8 @@ fetch(urlArtistas)
       </article>` ;
   
     } else { 
-         alert('No hay resultados para tu busqueda')
-    }})
+         alert('No hay resultados para tu busqueda') 
+         }})
 
 fetch(urlGenero)
 .then(function (response) {
@@ -63,7 +63,7 @@ fetch(urlGenero)
     
 } else {
     alert('No hay resultados para tu busqueda')
-}
+   }
   })
 
   .catch(function (errores) {

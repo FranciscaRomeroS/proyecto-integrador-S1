@@ -1,4 +1,4 @@
-let proxi = `https://cors-anywhere.herokuapp.com/`; /* Te intercambia por otra la direccion */
+let proxi = `https://cors-anywhere.herokuapp.com/`; /* Te intercambia por otra la direccion, intermediario */
 let endpoint = `https://api.deezer.com/chart`; /* la ruta que proporciona la info a renderizar */
 let url = proxi+endpoint; /* las dos unidas tienen que ir en el fetch */
 
