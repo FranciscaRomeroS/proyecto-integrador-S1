@@ -7,6 +7,7 @@ let imgCancion = document.querySelector('#imgCancion')
 let tituloCancion = document.querySelector('#tituloCancion')
 let nombreArtista   = document.querySelector('#nombreArtista')
 let submit = document.getElementById('btnPlaylist'); 
+let player = document.querySelector('#player')
 
 const url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`;
 let idGuardar=id
@@ -21,6 +22,7 @@ fetch(url)
         imgCancion.src = data.album.cover_medium;
         tituloCancion.innerText = data.title;
         nombreArtista.innerText = data.artist.name;
+        player.src = data.preview
         
 
 
