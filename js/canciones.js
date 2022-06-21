@@ -38,31 +38,35 @@ fetch(url)
         console.log(error);
     })
     
-    let playlist = [];
-    let recuperoStorage = localStorage.getItem('playlist');
+    let favoritos = [];
 
-    if(recuperoStorage != null){
-        playlist = JSON.parse(recuperoStorage);
+    let recuperoStorage = localStorage.getItem('favoritos');
+
+    if (recuperoStorage != null) {
+        favoritos = JSON.parse(recuperoStorage);
     }
     
-    let fav = document.querySelector('.fav')
+    let fav = document.querySelector('.fav');
     
 
-    if(playlist.includes(id)) {
-        submit.innerText = "Quitar de la Playlist";
+    if(favoritos.includes(id)) {
+        fav.innerText = "Quitar de la Playlist";
     }
-    fav.addEventListener(`click`,function(e){
+
+    fav.addEventListener('click', function(e){
         e.preventDefault()
 
-        if(playlist.includes(id)){
-            let indice = playlist.indexOf(id);
-            playlist.splice(indice, 1)
+        if (favoritos.includes(id)) {
+            let indice = favoritos.indexOf(id);
+            favoritos.splice(indice, 1)
             fav.innerText = "Agregar a mi Playlist"
+
         } else {
-            playlist.push(id);
-            submit.innerText = "Quitar de mi Playlist";
+            favoritos.push(id);{
+                fav.innerText = "Quitar de mi Playlist"
+            }
         }
-        let playlistToString = JSON.stringify(playlist);
-        localStorage.setItem('playlist', playlistToString)
+        let favsToString = JSON.stringify(favoritos);
+        localStorage.setItem('favoritos', favsToString)
 
     });

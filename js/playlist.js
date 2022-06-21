@@ -23,13 +23,13 @@ if(titulo == null || titulo.length == 0){
             
             <br>
             <form action="./playlist.html" method="GET">
-                <button type="submit">Agregar a mi Playlist</button>
+                <button class="fav" type="submit">Agregar a mi Playlist</button>
             </form>
             <br>
             
         </article>`;
 
-        section.innerHTML = cancionesPlaylist;
+        section.innerHTML += cancionesPlaylist;
         })
         .catch(function(error){
             console.log(error);
