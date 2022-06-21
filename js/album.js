@@ -6,6 +6,8 @@ let id = qsol.get('id');
 let titulo = document.querySelector('.tema')
 let sectionAlbumes = document.querySelector('.cajaPadre3')
 let cancionesArtistas = document.querySelector('.listaCanciones')
+
+
        
 let urlAlbum = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${id}`;
 let urlCancionesAlbum = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${id}/tracks`;
