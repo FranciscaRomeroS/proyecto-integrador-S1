@@ -1,7 +1,7 @@
-let queryString = location.search;
-let queryStringObjLiteral = new URLSearchParams(queryString);
+let qs = location.search;
+let qsol = new URLSearchParams(qs);
 let artistName = queryStringObjLiteral.get("name");
-let id = queryStringObjLiteral.get("id");
+let id = qsol.get("id");
 
 let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${artistName}`;
 let urlGenero = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`
