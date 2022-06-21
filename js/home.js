@@ -41,7 +41,7 @@ fetch(url) /* recibe un paramero que es la ruta desde donde obtenemos la info, r
 
         for (let i = 0; i <5; i++) {
             sectionAlbums.innerHTML += `<article class="Albumes">
-            <a href="./album.html?id=302127">
+            <a href="./album.html?id=${albums[i].id}">
             <img class="top2" src="${albums[i].cover_medium}" alt="">  
             </a>
             <a class="letra" href="./album.html">
